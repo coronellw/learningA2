@@ -1,25 +1,28 @@
 "use strict";
-var HEROES = [
-    { id: 11, name: "Bloodseeker", team: "Dire" },
-    { id: 12, name: "Sniper", team: "Dire" },
-    { id: 13, name: "Warlock", team: "Radiant" },
-    { id: 14, name: "Windranger", team: "Radiant" },
-    { id: 15, name: "WrathKing", team: "Dire" },
-    { id: 16, name: "Witch Doctor", team: "Radiant" },
-    { id: 17, name: "Dragon Knight", team: "Dire" },
-    { id: 18, name: "Sand King", team: "Radiant" },
-    { id: 19, name: "Bounty Hunter", team: "Dire" },
-    { id: 20, name: "Viper", team: "Radiant" }
-];
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
         this.hero = {
             id: 1,
-            name: 'Windstorm',
-            team: 'Neutral'
+            name: 'Windstorm'
         };
-        this.heroes = HEROES;
     }
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'my-app',
+            template: " <h1>{{title}}</h1>\n\t\t\t\t<h2>My Heroes</h2>\n\t\t\t\t<ul class=\"heroes\">\n\t\t\t\t  <li>\n\t\t\t\t    <!-- each hero goes here -->\n\t\t\t\t  </li>\n\t\t\t\t</ul>\n\n\t\t\t\t<h2>{{hero.name}} deatils!</h2>\n\t\t\t\t<div><label>id:</label>{{hero.id}}</div>\n\t\t\t\t<div>\n\t\t\t\t\t<label>Name:</label>\n\t\t\t\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n\t\t\t\t</div>\n\t\t\t\t"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
