@@ -19,7 +19,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: " <h1>{{title}}</h1>\n\t\t\t\t<h2>My Heroes</h2>\n\t\t\t\t<ul class=\"heroes\">\n\t\t\t\t  <li>\n\t\t\t\t    <!-- each hero goes here -->\n\t\t\t\t  </li>\n\t\t\t\t</ul>\n\n\t\t\t\t<h2>{{hero.name}} deatils!</h2>\n\t\t\t\t<div><label>id:</label>{{hero.id}}</div>\n\t\t\t\t<div>\n\t\t\t\t\t<label>Name:</label>\n\t\t\t\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n\t\t\t\t</div>\n\t\t\t\t"
+            template: " <h1>{{title}}</h1>\n\t\t\t\t<h2>My Heroes</h2>\n\t\t\t\t\n\t\t\t\t<h2>{{hero.name}} deatils!</h2>\n\t\t\t\t<div><label>id:</label>{{hero.id}}</div>\n\t\t\t\t<div>\n\t\t\t\t\t<label>Name:</label>\n\t\t\t\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n\t\t\t\t</div>\n\t\t\t\t"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
