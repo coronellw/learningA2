@@ -7,7 +7,8 @@ import { HeroService } from './hero.service';
 @Component({
 	moduleId: module.id,
 	selector: 'my-dashboard',
-	templateUrl: '../html/dashboard.component.html'
+	templateUrl: '../html/dashboard.component.html',
+	styleUrls:['../css/dashboard.component.css']
 })
 
 export class DashboardComponent implements OnInit {
@@ -21,8 +22,9 @@ export class DashboardComponent implements OnInit {
 		this.heroService.getHeroes().then(heroes=>this.heroes=heroes.slice(1,5));
 	}
 
-	gotoDetail(hero:Hero):void{
+	goToDetail(hero:Hero):void{
 		let link = ['/hero', hero.id];
+		console.log("Showing details of hero " + hero.name);
 		this.router.navigate(link);
 	}
 
